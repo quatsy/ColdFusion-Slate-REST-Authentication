@@ -27,7 +27,7 @@
 
 					<cfcatch type="any">
 						<cfset local.results.msg &= "AuthUser HTTP ERROR: #cfcatch.message#" />
-						<cfreturn local.results.results />
+						<cfreturn local.results />
 					</cfcatch>
 				</cftry>
 
