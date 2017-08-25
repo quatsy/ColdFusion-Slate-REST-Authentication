@@ -6,9 +6,9 @@
 
 	--->
 
-	<cfset requestURL = "https://your.SlateDomain.here/" />
+	<cfset requestURL = "https://admission.hamilton.edu/" />
 
-	<cffunction name="authUser" returntype="struct" output="true">
+	<cffunction name="authUser" returntype="struct" output="false">
 		<cfargument name="username" type="string" required="true" />
 		<cfargument name="password" type="string" required="true" />
 
@@ -27,7 +27,7 @@
 
 					<cfcatch type="any">
 						<cfset local.results.msg &= "AuthUser HTTP ERROR: #cfcatch.message#" />
-						<cfreturn results />
+						<cfreturn local.results.results />
 					</cfcatch>
 				</cftry>
 
